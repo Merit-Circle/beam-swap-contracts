@@ -7,3 +7,9 @@ Uniswap V2 protocol
 ```
 npx hardhat --network beam deploy
 ```
+
+## Verify new Pairs
+
+```
+npx hardhat --network beam verify-sourcify --contract "UniswapV2Pair" --path "core" --address 0x12345...
+```
