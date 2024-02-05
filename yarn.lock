@@ -318,7 +318,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.44.0
     "@uniswap/lib": ^4.0.1-alpha
     "@uniswap/v2-core": ^1.0.1
-    "@xtools-at/hardhat-sourcify": ^0.1.3
+    "@xtools-at/hardhat-sourcify": ^0.2.0
     chai: ^4.3.7
     commitizen: ^4.2.5
     cross-env: ^7.0.3
@@ -1934,9 +1934,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^18.15.7":
-  version: 18.17.14
-  resolution: "@types/node@npm:18.17.14"
-  checksum: f96ce1e588426a26cf82440193084f8bbab47bfb3c2e668cf174095f99ce808a20654b2137448c7e88cfd7b6c2b8521ffb6f714f521b3502ac595a0df0bff679
+  version: 18.19.14
+  resolution: "@types/node@npm:18.19.14"
+  dependencies:
+    undici-types: ~5.26.4
+  checksum: 3d42b50e649f18c6ca7044714eaeb51ba5fda463c845eeb1973bcbbfcab8e93179501fbf865e675cb0c7a5e59f7ea18eca8296b52c2455c856aa45c77ae815dc
   languageName: node
   linkType: hard
 
@@ -2143,16 +2145,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xtools-at/hardhat-sourcify@npm:^0.1.3":
-  version: 0.1.3
-  resolution: "@xtools-at/hardhat-sourcify@npm:0.1.3"
+"@xtools-at/hardhat-sourcify@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@xtools-at/hardhat-sourcify@npm:0.2.0"
   dependencies:
     "@types/node": ^18.15.7
     axios: ^1.3.4
     form-data: ^4.0.0
   peerDependencies:
     hardhat: ^2.0.0
-  checksum: 411882062974533d293fef40596b56a4af1f6f92f2ac9c125c5e2f074805c68d9ba56e8b13a2e8410692c96c1ce0a047b3d9567f74376f1378a56d645d60bf1c
+  checksum: bfb13579dc674a684208baa19417baf4356d05cc27bed05253da7ab6a681902a1bffd621a71de013e73bd1c43692085d6c5f34f0e44935d53f2fa130bb1655b9
   languageName: node
   linkType: hard
 
@@ -2638,13 +2640,13 @@ __metadata:
   linkType: hard
 
 "axios@npm:^1.3.4":
-  version: 1.5.0
-  resolution: "axios@npm:1.5.0"
+  version: 1.6.7
+  resolution: "axios@npm:1.6.7"
   dependencies:
-    follow-redirects: ^1.15.0
+    follow-redirects: ^1.15.4
     form-data: ^4.0.0
     proxy-from-env: ^1.1.0
-  checksum: e7405a5dbbea97760d0e6cd58fecba311b0401ddb4a8efbc4108f5537da9b3f278bde566deb777935a960beec4fa18e7b8353881f2f465e4f2c0e949fead35be
+  checksum: 87d4d429927d09942771f3b3a6c13580c183e31d7be0ee12f09be6d5655304996bb033d85e54be81606f4e89684df43be7bf52d14becb73a12727bf33298a082
   languageName: node
   linkType: hard
 
@@ -4913,13 +4915,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.12.1, follow-redirects@npm:^1.15.0":
+"follow-redirects@npm:^1.12.1":
   version: 1.15.2
   resolution: "follow-redirects@npm:1.15.2"
   peerDependenciesMeta:
     debug:
       optional: true
   checksum: faa66059b66358ba65c234c2f2a37fcec029dc22775f35d9ad6abac56003268baf41e55f9ee645957b32c7d9f62baf1f0b906e68267276f54ec4b4c597c2b190
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.15.4":
+  version: 1.15.5
+  resolution: "follow-redirects@npm:1.15.5"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 5ca49b5ce6f44338cbfc3546823357e7a70813cecc9b7b768158a1d32c1e62e7407c944402a918ea8c38ae2e78266312d617dc68783fac502cbb55e1047b34ec
   languageName: node
   linkType: hard
 
@@ -9982,6 +9994,13 @@ __metadata:
     has-symbols: ^1.0.3
     which-boxed-primitive: ^1.0.2
   checksum: b7a1cf5862b5e4b5deb091672ffa579aa274f648410009c81cca63fed3b62b610c4f3b773f912ce545bb4e31edc3138975b5bc777fc6e4817dca51affb6380e9
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~5.26.4":
+  version: 5.26.5
+  resolution: "undici-types@npm:5.26.5"
+  checksum: 3192ef6f3fd5df652f2dc1cd782b49d6ff14dc98e5dced492aa8a8c65425227da5da6aafe22523c67f035a272c599bb89cfe803c1db6311e44bed3042fc25487
   languageName: node
   linkType: hard
 

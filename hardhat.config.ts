@@ -6,6 +6,7 @@ import { resolve } from "path";
 
 import "./tasks/accounts";
 import "./tasks/deploy";
+import "./tasks/deploy-zkevm";
 
 const dotenvConfigPath: string = process.env.DOTENV_CONFIG_PATH || "./.env";
 dotenvConfig({ path: resolve(__dirname, dotenvConfigPath) });
@@ -48,6 +49,16 @@ const networks = {
   beam: {
     chainId: 4337,
     url: "https://subnets.avax.network/beam/mainnet/rpc",
+    accounts,
+  },
+  imtblZkevm: {
+    chainId: 13371,
+    url: "https://rpc.immutable.com",
+    accounts,
+  },
+  imtblZkevmTestnet: {
+    chainId: 13473,
+    url: "https://rpc.testnet.immutable.com",
     accounts,
   },
 
@@ -169,7 +180,27 @@ module.exports = {
       bscTestnet: process.env.BSCSCAN_API_KEY || "",
       optimisticEthereum: process.env.OPTIMISM_API_KEY || "", // TODO
       arbitrumOne: process.env.ARBISCAN_API_KEY || "", // TODO
+      imtblZkevmTestnet: "a",
+      imtblZkevm: "a",
     },
+    customChains: [
+      {
+        network: "imtblZkevmTestnet",
+        chainId: 13473,
+        urls: {
+          apiURL: "https://explorer.testnet.immutable.com/api/",
+          browserURL: "https://explorer.testnet.immutable.com/",
+        },
+      },
+      {
+        network: "imtblZkevm",
+        chainId: 13371,
+        urls: {
+          apiURL: "https://explorer.immutable.com/api/",
+          browserURL: "https://explorer.immutable.com/",
+        },
+      },
+    ],
   },
   typechain: {
     outDir: "types",
